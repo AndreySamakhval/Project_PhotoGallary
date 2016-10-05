@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
 
     Genres.GetGenres();
-
+  //  $('.ganre_link').click(Genres.GetPhotos());
     $('#linkGenres').click(
         
     function () {
@@ -16,10 +16,9 @@
     
     });
 
-    //$(".ganre_link").click(
-    //    function () {
-    //        Genres.GetPhotos()
-    //    });
+    //$(".ganre_link").live("click", function () {
+    //    Genres.GetPhotos();
+    //});
 });
 
 Genres = {
@@ -47,11 +46,12 @@ Genres = {
     },
     RenderGenresDiv: function (tempGenres) {
         $('#divAddGenresTmpl').tmpl(tempGenres).appendTo('#containerIndexPage');
-      //  $(".ganre_link").click( Genres.GetPhotos());
+        //Genres.GetPhotos();
+        $(".container_photo_genres").
     },
-    GetPhotos: function () {
-        var id = $(this).attr("id");
-        $ajax({
+    GetPhotos: function (id) {
+        //var id = $(this).attr("id");
+        $.ajax({
             type: 'GET',
             url: '/home/photos/' + id,
             asynch: true,
