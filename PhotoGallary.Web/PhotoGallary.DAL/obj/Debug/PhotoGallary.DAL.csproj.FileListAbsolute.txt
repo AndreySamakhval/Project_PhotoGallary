@@ -1,0 +1,5 @@
+D:\EretiK\oneDrive\Project\PhotoGallary.Web\PhotoGallary.DAL\bin\Debug\PhotoGallary.DAL.dll
+D:\EretiK\oneDrive\Project\PhotoGallary.Web\PhotoGallary.DAL\bin\Debug\PhotoGallary.DAL.pdb
+D:\EretiK\oneDrive\Project\PhotoGallary.Web\PhotoGallary.DAL\obj\Debug\PhotoGallary.DAL.csprojResolveAssemblyReference.cache
+D:\EretiK\oneDrive\Project\PhotoGallary.Web\PhotoGallary.DAL\obj\Debug\PhotoGallary.DAL.dll
+D:\EretiK\oneDrive\Project\PhotoGallary.Web\PhotoGallary.DAL\obj\Debug\PhotoGallary.DAL.pdb
