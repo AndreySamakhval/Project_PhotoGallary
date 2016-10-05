@@ -14,7 +14,7 @@ namespace PhotoGallary.Web.Controllers
         public ActionResult Index()
         {
 
-            return View(_service.GetPhotos());
+            return View();
         }
 
         public JsonResult Genres()

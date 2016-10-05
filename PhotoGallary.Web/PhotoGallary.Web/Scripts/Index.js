@@ -14,7 +14,12 @@
             Genres.showGenres = false;
         }
     
-        });
+    });
+
+    //$(".ganre_link").click(
+    //    function () {
+    //        Genres.GetPhotos()
+    //    });
 });
 
 Genres = {
@@ -42,6 +47,7 @@ Genres = {
     },
     RenderGenresDiv: function (tempGenres) {
         $('#divAddGenresTmpl').tmpl(tempGenres).appendTo('#containerIndexPage');
+      //  $(".ganre_link").click( Genres.GetPhotos());
     },
     GetPhotos: function () {
         var id = $(this).attr("id");

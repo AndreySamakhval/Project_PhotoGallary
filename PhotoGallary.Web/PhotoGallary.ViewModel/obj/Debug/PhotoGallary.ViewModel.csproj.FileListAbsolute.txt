@@ -3,3 +3,8 @@ D:\EretiK\oneDrive\Project\PhotoGallary.Web\PhotoGallary.ViewModel\bin\Debug\Pho
 D:\EretiK\oneDrive\Project\PhotoGallary.Web\PhotoGallary.ViewModel\obj\Debug\PhotoGallary.ViewModel.csprojResolveAssemblyReference.cache
 D:\EretiK\oneDrive\Project\PhotoGallary.Web\PhotoGallary.ViewModel\obj\Debug\PhotoGallary.ViewModel.dll
 D:\EretiK\oneDrive\Project\PhotoGallary.Web\PhotoGallary.ViewModel\obj\Debug\PhotoGallary.ViewModel.pdb
+D:\EretiK\Git\PhotoGallary.Web\PhotoGallary.ViewModel\bin\Debug\PhotoGallary.ViewModel.dll
+D:\EretiK\Git\PhotoGallary.Web\PhotoGallary.ViewModel\bin\Debug\PhotoGallary.ViewModel.pdb
+D:\EretiK\Git\PhotoGallary.Web\PhotoGallary.ViewModel\obj\Debug\PhotoGallary.ViewModel.csprojResolveAssemblyReference.cache
+D:\EretiK\Git\PhotoGallary.Web\PhotoGallary.ViewModel\obj\Debug\PhotoGallary.ViewModel.dll
+D:\EretiK\Git\PhotoGallary.Web\PhotoGallary.ViewModel\obj\Debug\PhotoGallary.ViewModel.pdb

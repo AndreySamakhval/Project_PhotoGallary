@@ -3,3 +3,8 @@ D:\EretiK\oneDrive\Project\PhotoGallary.Web\PhotoGallary.DAL\bin\Debug\PhotoGall
 D:\EretiK\oneDrive\Project\PhotoGallary.Web\PhotoGallary.DAL\obj\Debug\PhotoGallary.DAL.csprojResolveAssemblyReference.cache
 D:\EretiK\oneDrive\Project\PhotoGallary.Web\PhotoGallary.DAL\obj\Debug\PhotoGallary.DAL.dll
 D:\EretiK\oneDrive\Project\PhotoGallary.Web\PhotoGallary.DAL\obj\Debug\PhotoGallary.DAL.pdb
+D:\EretiK\Git\PhotoGallary.Web\PhotoGallary.DAL\bin\Debug\PhotoGallary.DAL.dll
+D:\EretiK\Git\PhotoGallary.Web\PhotoGallary.DAL\bin\Debug\PhotoGallary.DAL.pdb
+D:\EretiK\Git\PhotoGallary.Web\PhotoGallary.DAL\obj\Debug\PhotoGallary.DAL.csprojResolveAssemblyReference.cache
+D:\EretiK\Git\PhotoGallary.Web\PhotoGallary.DAL\obj\Debug\PhotoGallary.DAL.dll
+D:\EretiK\Git\PhotoGallary.Web\PhotoGallary.DAL\obj\Debug\PhotoGallary.DAL.pdb

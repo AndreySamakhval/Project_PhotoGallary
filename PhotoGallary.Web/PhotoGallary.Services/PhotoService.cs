@@ -24,7 +24,7 @@ namespace PhotoGallary.Services
         {
            // var _genres = new List<GenresViewModel>();
 
-            var _genres = DB.Genres.Select(x => new GenresViewModel { id = x.Id, Name = x.Name, Description = x.Description }).ToList();
+            var _genres = DB.Genres.Select(x => new GenresViewModel { Id = x.Id, Name = x.Name, Description = x.Description }).ToList();
 
             return _genres;
         }
