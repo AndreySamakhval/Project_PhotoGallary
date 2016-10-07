@@ -20,7 +20,7 @@ namespace PhotoGallary.Web.Controllers
         public JsonResult Genres()
         {
             
-           return Json( _service.GetGenres(), JsonRequestBehavior.AllowGet);
+           return Json( _service.GetGenresDB(), JsonRequestBehavior.AllowGet);
         }
 
         public JsonResult Photos(int id = 0)

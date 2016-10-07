@@ -47,7 +47,10 @@ Genres = {
     RenderGenresDiv: function (tempGenres) {
         $('#divAddGenresTmpl').tmpl(tempGenres).appendTo('#containerIndexPage');
         //Genres.GetPhotos();
-        $(".container_photo_genres").
+        $(".container_photo_genres").each(function () {
+            var id = $(this).attr("id");
+            Genres.GetPhotos(id);
+        });
     },
     GetPhotos: function (id) {
         //var id = $(this).attr("id");
@@ -56,7 +59,7 @@ Genres = {
             url: '/home/photos/' + id,
             asynch: true,
             success: function (output, status, xhr) {
-                $('#divGenresTmpl').tmpl(output).appendTo('.photo3pt #' + id);
+                $('#divGenresTmpl').tmpl(output).appendTo('#IdPhotoDiv'+ id);
             },
             error: function () {
                 alert('Error');

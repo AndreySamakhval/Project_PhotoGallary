@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using PhotoGallary.ViewModel;
 using PhotoGallary.DAL;
+using PhotoGallary.DalDF;
 
 namespace PhotoGallary.Services
 {
@@ -17,7 +18,8 @@ namespace PhotoGallary.Services
 
         public List<PhotoViewModel> GetPhotos()
         {
-            return DB.Photos.Select(x=> new PhotoViewModel { Id=x.Id, Description=x.Description, Name = x.Name, Url = x.Url}).ToList();
+            var res = DB.Photos.Select(x => new PhotoViewModel { Id = x.Id, Description = x.Description, Name = x.Name, Url = x.Url }).ToList();
+            return res;
         }
 
         public List<GenresViewModel> GetGenres()
@@ -42,6 +44,20 @@ namespace PhotoGallary.Services
                 else break;
             }
             return res;
+        }
+
+
+        public List<GenresViewModel> GetGenresDB()
+        {
+            var _genres = new List<GenresViewModel>();
+
+            // var _genres = DB.Genres.Select(x => new GenresViewModel { Id = x.Id, Name = x.Name, Description = x.Description }).ToList();
+
+            using (var DB = new PhotoGallaryEntities())
+            {
+                _genres = DB.Genres.Select(g => new GenresViewModel { Id = g.Id, Name = g.Name, Description = g.Description }).ToList();
+            }
+                return _genres;
         }
 
 
