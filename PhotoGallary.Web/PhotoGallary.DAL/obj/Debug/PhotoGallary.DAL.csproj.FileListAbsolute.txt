@@ -13,3 +13,8 @@ G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.DAL\bin\Debug\PhotoGa
 G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.DAL\obj\Debug\PhotoGallary.DAL.csprojResolveAssemblyReference.cache
 G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.DAL\obj\Debug\PhotoGallary.DAL.dll
 G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.DAL\obj\Debug\PhotoGallary.DAL.pdb
+D:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.DAL\bin\Debug\PhotoGallary.DAL.dll
+D:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.DAL\bin\Debug\PhotoGallary.DAL.pdb
+D:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.DAL\obj\Debug\PhotoGallary.DAL.csprojResolveAssemblyReference.cache
+D:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.DAL\obj\Debug\PhotoGallary.DAL.dll
+D:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.DAL\obj\Debug\PhotoGallary.DAL.pdb

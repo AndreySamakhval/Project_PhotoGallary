@@ -10,3 +10,15 @@ G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.DalDF\bin\Debug\ru\En
 G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.DalDF\obj\Debug\PhotoGallary.DalDF.csprojResolveAssemblyReference.cache
 G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.DalDF\obj\Debug\PhotoGallary.DalDF.dll
 G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.DalDF\obj\Debug\PhotoGallary.DalDF.pdb
+D:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.DalDF\bin\Debug\PhotoGallary.DalDF.dll.config
+D:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.DalDF\bin\Debug\PhotoGallary.DalDF.dll
+D:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.DalDF\bin\Debug\PhotoGallary.DalDF.pdb
+D:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.DalDF\bin\Debug\EntityFramework.dll
+D:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.DalDF\bin\Debug\EntityFramework.SqlServer.dll
+D:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.DalDF\bin\Debug\EntityFramework.xml
+D:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.DalDF\bin\Debug\EntityFramework.SqlServer.xml
+D:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.DalDF\bin\Debug\ru\EntityFramework.resources.dll
+D:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.DalDF\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+D:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.DalDF\obj\Debug\PhotoGallary.DalDF.csprojResolveAssemblyReference.cache
+D:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.DalDF\obj\Debug\PhotoGallary.DalDF.dll
+D:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.DalDF\obj\Debug\PhotoGallary.DalDF.pdb

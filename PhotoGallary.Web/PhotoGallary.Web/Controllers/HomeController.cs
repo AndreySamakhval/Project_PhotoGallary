@@ -13,19 +13,23 @@ namespace PhotoGallary.Web.Controllers
 
         public ActionResult Index()
         {
-
             return View();
         }
 
         public JsonResult Genres()
         {
             
-           return Json( _service.GetGenresDB(), JsonRequestBehavior.AllowGet);
+           return Json( _service.GetGenres(), JsonRequestBehavior.AllowGet);
         }
 
         public JsonResult Photos(int id = 0)
         {
             return Json(_service.GetPhotos(id), JsonRequestBehavior.AllowGet);
+        }
+
+        public JsonResult LastPhotos(int id)
+        {
+            return Json(_service.GetLastPhotos(id), JsonRequestBehavior.AllowGet);
         }
     }
 }

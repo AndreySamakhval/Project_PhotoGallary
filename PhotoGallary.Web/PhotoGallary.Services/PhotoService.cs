@@ -11,53 +11,70 @@ namespace PhotoGallary.Services
 {
     public class PhotoService : IPhotoService
     {
-        public PhotoViewModel GetPhoto(int id)
+        public PhotoViewModel GetPhoto(int id = 1)
         {
-            throw new NotImplementedException();
+            var photo = new PhotoViewModel();
+
+            using (var DB = new PhotoGallaryEntities())
+            {
+                photo = DB.Photos.Where(x => x.Id == id).Select(p => new PhotoViewModel { Id = p.Id, Name = p.Name, Url = p.Url, Description = p.Description }).Single();
+            }
+            return photo;
         }
 
         public List<PhotoViewModel> GetPhotos()
         {
-            var res = DB.Photos.Select(x => new PhotoViewModel { Id = x.Id, Description = x.Description, Name = x.Name, Url = x.Url }).ToList();
-            return res;
+            var photos = new List<PhotoViewModel>();
+
+            using (var DB = new PhotoGallaryEntities())
+            {
+                photos = DB.Photos.Select(p => new PhotoViewModel { Id = p.Id, Name = p.Name, Description = p.Description, Url = p.Url }).ToList();
+            }
+            return photos;
         }
+
+        //get photos of genres
+        public List<PhotoViewModel> GetPhotos(int id)
+        {
+            var photos = new List<PhotoViewModel>();
+            using (var DB = new PhotoGallaryEntities())
+            {
+                photos = DB.Genres.First(x => x.Id == id).Photos.Select(p => new PhotoViewModel { Id = p.Id, Description = p.Description, Name = p.Name, Url = p.Url }).ToList();
+            }
+
+            return photos;
+        }
+
+        //get last 5 photo of genre
+
+        public List<PhotoViewModel> GetLastPhotos(int id)
+        {
+            var photos = new List<PhotoViewModel>();
+
+            using (var DB = new PhotoGallaryEntities())
+            {
+                photos = DB.Genres.First(x => x.Id == id).Photos.OrderByDescending(x => x.DateAdded).Take(5).Select(p => new PhotoViewModel
+                {
+                    Id = p.Id,
+                    Name = p.Name,
+                    Description = p.Description,
+                    Url = p.Url
+                }).ToList();
+            }
+
+            return photos;
+        }
+
 
         public List<GenresViewModel> GetGenres()
         {
-           // var _genres = new List<GenresViewModel>();
-
-            var _genres = DB.Genres.Select(x => new GenresViewModel { Id = x.Id, Name = x.Name, Description = x.Description }).ToList();
-
-            return _genres;
-        }
-
-        public List<PhotoViewModel> GetPhotos(int id)
-        {
-            var photos = DB.Photos.Select(x => new PhotoViewModel { Id = x.Id, Description = x.Description, Name = x.Name, Url = x.Url }).ToList();
-
-            var res = new List<PhotoViewModel>();
-            int count = 0;
-            foreach(var item in photos)
-            {
-                if (count < 3)
-                    res.Add(item);
-                else break;
-            }
-            return res;
-        }
-
-
-        public List<GenresViewModel> GetGenresDB()
-        {
             var _genres = new List<GenresViewModel>();
-
-            // var _genres = DB.Genres.Select(x => new GenresViewModel { Id = x.Id, Name = x.Name, Description = x.Description }).ToList();
 
             using (var DB = new PhotoGallaryEntities())
             {
                 _genres = DB.Genres.Select(g => new GenresViewModel { Id = g.Id, Name = g.Name, Description = g.Description }).ToList();
             }
-                return _genres;
+            return _genres;
         }
 
 

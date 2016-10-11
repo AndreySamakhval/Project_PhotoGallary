@@ -1,9 +1,7 @@
 ﻿$(document).ready(function () {
 
     Genres.GetGenres();
-  //  $('.ganre_link').click(Genres.GetPhotos());
-    $('#linkGenres').click(
-        
+    $('#linkGenres').click(        
     function () {
         if (!Genres.showGenres) {
             $('#navTabsGanres').show();
@@ -12,13 +10,9 @@
         else {
             $('#navTabsGanres').hide();
             Genres.showGenres = false;
-        }
-    
+        }    
     });
 
-    //$(".ganre_link").live("click", function () {
-    //    Genres.GetPhotos();
-    //});
 });
 
 Genres = {
@@ -32,7 +26,6 @@ Genres = {
             success: function (output, status, xhr) {
                 Genres.RenderGenresNav(output);
                 Genres.RenderGenresDiv(output);
-
             },
             error: function () {
                 alert('Error');
@@ -46,17 +39,15 @@ Genres = {
     },
     RenderGenresDiv: function (tempGenres) {
         $('#divAddGenresTmpl').tmpl(tempGenres).appendTo('#containerIndexPage');
-        //Genres.GetPhotos();
         $(".container_photo_genres").each(function () {
             var id = $(this).attr("id");
             Genres.GetPhotos(id);
         });
     },
     GetPhotos: function (id) {
-        //var id = $(this).attr("id");
         $.ajax({
             type: 'GET',
-            url: '/home/photos/' + id,
+            url: '/home/lastphotos/' + id,
             asynch: true,
             success: function (output, status, xhr) {
                 $('#divGenresTmpl').tmpl(output).appendTo('#IdPhotoDiv'+ id);
