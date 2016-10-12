@@ -1,0 +1,24 @@
+﻿@model PhotoGallary.ViewModel.GenresViewModel
+
+@{
+    ViewBag.Title = "Photo of " + Model.Name;
+}
+<script src="~/Scripts/Genre.js"></script>
+
+<h2 class="text-center">@Model.Name</h2>
+<hr />
+<div class="genreId" id="@Model.Id"></div>
+<div class="container-fluid" id="containerPhotosId"></div>
+
+
+<script id="divPhotosTmpl" type="text/x-jquery-tmpl">
+    <div class="onePhotoGenre text-center">
+       
+        <img class="img-thumbnail" src=${Url} alt="Image" />
+        <div class="text-primary">${Description}</div>
+        <div class="text-muted">Photo added: ${DateAdded}</div>
+        <hr />
+    </div>
+
+</script>
+

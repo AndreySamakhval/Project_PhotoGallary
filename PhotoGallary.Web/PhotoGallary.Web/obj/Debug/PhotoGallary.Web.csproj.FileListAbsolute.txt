@@ -113,7 +113,6 @@ G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\System.Web.Ra
 G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\System.Web.Webpages.Deployment.dll
 G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\System.Web.Webpages.dll
 G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\System.Web.Webpages.Razor.dll
-G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\PhotoGallary.DAL.dll
 G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\PhotoGallary.Services.pdb
 G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\PhotoGallary.ViewModel.pdb
 G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
@@ -123,7 +122,6 @@ G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\System.Web.We
 G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\System.Web.Webpages.Razor.xml
 G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\System.Web.Helpers.xml
 G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\System.Web.Mvc.xml
-G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\PhotoGallary.DAL.pdb
 G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\ru\System.Web.Razor.resources.dll
 G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\ru\System.Web.Webpages.resources.dll
 G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\ru\System.Web.Webpages.Deployment.resources.dll

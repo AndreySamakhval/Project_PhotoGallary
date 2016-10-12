@@ -2,12 +2,7 @@
 @{
     ViewBag.Title = "Photo Gallary";
 }
-
-
-
-
-<ul class="nav nav-tabs nav-justified" id="navTabsGanres"></ul>
-
+<script src="~/Scripts/Index.js"></script>
 
 <div class="container-fluid" id="containerIndexPage">
 
@@ -15,13 +10,9 @@
 
 
 
-<script id="genresTmpl" type="text/x-jquery-tmpl">
-    <li><a class="navbar-link nav-justified" id="${Id}">${Name}</a></li>
-</script>
-
 <script id="divAddGenresTmpl" type="text/x-jquery-tmpl">
     <div class="container container_photo_genres text-center" id="${Id}">
-        <a class="navbar-link text-center ganre_link" href="#" id="${Id}">${Name}</a>
+        <a class="navbar-link text-center ganre_link" href="/home/genre/${Id}" id="${Id}">${Name}</a>
         <hr />
         <div class="photo3pt" id="IdPhotoDiv${Id}">
         </div>

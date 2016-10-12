@@ -10,7 +10,8 @@
     <script src="~/Scripts/jQuery.tmpl.min.js"></script>
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
-    <script src="~/Scripts/Index.js"></script>
+    <script src="~/Scripts/Layout.js"></script>
+
 </head>
 <body>
     <div class="navbar navbar-inverse  navbar-fixed-top">
@@ -18,20 +19,49 @@
             <div class="navbar-header">
                 <div class="container">
                     <div class="navbar-left navbar-brand"><a href="/home/index" class="navbar-link"><span class="glyphicon glyphicon-home"></span>  PhotoGallary</a></div>
-                    <div class="navbar-brand navbar_genres"><a class="navbar-link" id="linkGenres"><span class="glyphicon glyphicon-list"></span>GENRES</a></div>
-                    <div class="navbar-right"><a href="" class="navbar-link"><span class="glyphicon glyphicon-user"></span> Log On</a></div>
+                    <div>
 
+                    </div>
+
+
+                    @*<div class="navbar-brand navbar_genres"><a class="navbar-link" id="linkGenres"><span class="glyphicon glyphicon-list"></span>GENRES</a></div>*@
+                    <div class="navbar-right"><a href="/admin/index" class="navbar-link"> Admin</a></div>
+
+                    @{
+                        if (HttpContext.Current.User.Identity.IsAuthenticated)
+                        {
+                            <div class="navbar-right">
+                                <label class="text-info">@HttpContext.Current.User.Identity.Name</label> |
+                                <a href="/account/logout" class="navbar-link"><span class="glyphicon glyphicon-user"></span>LogOut</a>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="navbar-right"><a href="/account/login" class="navbar-link"><span class="glyphicon glyphicon-user"></span>LogIn</a></div>
+                        }
+                    }
                 </div>
-                </div>
-            @*<div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                </ul>
-            </div>*@
+            </div>
+
         </div>
     </div>
 
+
+
+
+    <script id="genresTmpl" type="text/x-jquery-tmpl">
+        <li class="navBarMenu" id="${Id}"><a class="navbar-link nav-justified" href="/home/genre/${Id}" id="${Id}">${Name}</a></li>
+    </script>
+
     <div class="container body-content">
-        @RenderBody()
+        <div class="row">
+            <div class="col-md-2 col-sm-2 navbar-fixed-top">
+                <ul class="nav nav-stacked nav-pills" id="navTabsGanres"></ul>
+            </div>
+            <div class="col-md-10 col-sm-2">
+                @RenderBody()
+            </div>
+        </div>
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - Photo Gallary</p>

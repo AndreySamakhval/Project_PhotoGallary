@@ -11,24 +11,26 @@ namespace PhotoGallary.Services
 {
     public class PhotoService : IPhotoService
     {
+        //get one photo for id
         public PhotoViewModel GetPhoto(int id = 1)
         {
             var photo = new PhotoViewModel();
 
             using (var DB = new PhotoGallaryEntities())
             {
-                photo = DB.Photos.Where(x => x.Id == id).Select(p => new PhotoViewModel { Id = p.Id, Name = p.Name, Url = p.Url, Description = p.Description }).Single();
+                photo = DB.Photos.Where(x => x.Id == id).Select(p => new PhotoViewModel { Id = p.Id, Name = p.Name, Url = p.Url, Description = p.Description, DateAdded = p.DateAdded.ToString() }).Single();
             }
             return photo;
         }
 
+        // get all photo
         public List<PhotoViewModel> GetPhotos()
         {
             var photos = new List<PhotoViewModel>();
 
             using (var DB = new PhotoGallaryEntities())
             {
-                photos = DB.Photos.Select(p => new PhotoViewModel { Id = p.Id, Name = p.Name, Description = p.Description, Url = p.Url }).ToList();
+                photos = DB.Photos.Select(p => new PhotoViewModel { Id = p.Id, Name = p.Name, Description = p.Description, Url = p.Url, DateAdded = p.DateAdded.ToString() }).ToList();
             }
             return photos;
         }
@@ -39,7 +41,7 @@ namespace PhotoGallary.Services
             var photos = new List<PhotoViewModel>();
             using (var DB = new PhotoGallaryEntities())
             {
-                photos = DB.Genres.First(x => x.Id == id).Photos.Select(p => new PhotoViewModel { Id = p.Id, Description = p.Description, Name = p.Name, Url = p.Url }).ToList();
+                photos = DB.Genres.First(x => x.Id == id).Photos.Select(p => new PhotoViewModel { Id = p.Id, Description = p.Description, Name = p.Name, Url = p.Url, DateAdded = p.DateAdded.ToString()}).ToList();
             }
 
             return photos;
@@ -58,14 +60,15 @@ namespace PhotoGallary.Services
                     Id = p.Id,
                     Name = p.Name,
                     Description = p.Description,
-                    Url = p.Url
+                    Url = p.Url,
+                    DateAdded = p.DateAdded.ToString()
                 }).ToList();
             }
 
             return photos;
         }
 
-
+        //get all genres
         public List<GenresViewModel> GetGenres()
         {
             var _genres = new List<GenresViewModel>();
@@ -75,6 +78,19 @@ namespace PhotoGallary.Services
                 _genres = DB.Genres.Select(g => new GenresViewModel { Id = g.Id, Name = g.Name, Description = g.Description }).ToList();
             }
             return _genres;
+        }
+
+        // get one genre
+        public GenresViewModel GetGenre(int id)
+        {          
+            GenresViewModel genre;
+
+            using(var DB = new PhotoGallaryEntities())
+            {
+                var res = DB.Genres.First(x => x.Id == id);
+                genre = new GenresViewModel { Id = res.Id, Description = res.Description, Name = res.Name };
+            }
+            return genre;
         }
 
 

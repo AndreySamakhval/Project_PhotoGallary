@@ -16,13 +16,20 @@ namespace PhotoGallary.Web.Controllers
             return View();
         }
 
+        public ActionResult Genre(int id)
+        {
+            var genre = _service.GetGenre(id);
+            return View(genre);
+        }
+
+
         public JsonResult Genres()
         {
             
            return Json( _service.GetGenres(), JsonRequestBehavior.AllowGet);
         }
 
-        public JsonResult Photos(int id = 0)
+        public JsonResult Photos(int id)
         {
             return Json(_service.GetPhotos(id), JsonRequestBehavior.AllowGet);
         }
