@@ -1,0 +1,58 @@
+﻿@model List<PhotoGallary.ViewModel.UserViewModel>
+
+@{
+    ViewBag.Title = "Users";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/Admin.js"></script>
+
+<h2>Users</h2>
+<a  id="btnAddUser">Create User  <span class="glyphicon glyphicon-arrow-down"></span></a>
+
+<div class="container" id="divAddUser">
+
+        <div class="form-group">
+            <input type="text" class="form-control" id="inputName" placeholder="Name" name="Name" style="margin-bottom:10px;" />
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="Password" style="margin-bottom:10px;" />
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" id="inputConfirmPassword" placeholder="Confirm Password" name="ConfirmPassword" style="margin-bottom:10px;" />
+        </div>
+    <p class="text-danger" id="errorPassword"></p>
+    <div id="divRadio">
+
+    </div>
+        <div class="form-group">
+            <button type="button" class="btn btn-default"id="btnAddOneUser">Add</button>
+        </div>
+    <p class="text-success" id="resultCreateUser"></p>
+
+</div>
+<table class="table-responsive table-striped table-bordered" id="tableUsers">
+    <tr>
+        <th>Name</th>
+        <th>Roles</th>
+        <th></th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelitem => item.Name)</td>
+            <td>@Html.DisplayFor(modelitem => item.Roles)</td>
+            <td><button type="button" class="btn btn" id="btnEdit" userName="@item.Name">Edit</button></td>
+            <td><button type="button" class="btn" id="btnDelete" userName="@item.Name">Delete</button></td>
+        </tr>
+    }
+</table>
+
+<script id="rolesTmpl" type="text/x-jquery-tmpl">
+    <div class="radio">
+        <label>
+            <input type="radio" name="userRole" value=${$data} @*checked*@>
+            ${$data}
+        </label>
+    </div>
+</script>

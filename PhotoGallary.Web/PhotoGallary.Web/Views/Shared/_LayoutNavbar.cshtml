@@ -1,0 +1,21 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/Layout.js"></script>
+<script id="genresTmpl" type="text/x-jquery-tmpl">
+    <li class="navBarMenu" id="${Id}"><a class="navbar-link nav-justified" href="/home/genre/${Id}" id="${Id}">${Name}</a></li>
+</script>
+
+
+<div class="row">
+    <div class="col-md-2 col-sm-2 navbar-fixed-top">
+        <ul class="nav nav-stacked nav-pills" id="navTabsGanres"></ul>
+    </div>
+    <div class="col-md-10 col-sm-2">
+        @RenderBody()
+    </div>
+</div>
+
+
+
+

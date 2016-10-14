@@ -1,7 +1,17 @@
 ﻿
 @{
     ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<script src="~/Scripts/Admin.js"></script>
+<h3>This is the page of configuration management Photo Gallary</h3>
 
-<h2>Index</h2>
+<div class="container text-center" style="margin-bottom:400px; margin-top:100px;">
+    <div class="row">
+        <a href="/admin/users"><div class="col-sm-4 col-sm-offset-1 divManage">Manage Users</div></a>
+        <a href="/admin/photos"><div class="col-sm-4 col-sm-offset-1 divManage">Manage Photos</div></a>
+
+    </div>
+</div>
+
 

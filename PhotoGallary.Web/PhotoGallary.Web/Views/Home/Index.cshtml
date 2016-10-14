@@ -1,10 +1,12 @@
 ﻿
 @{
-    ViewBag.Title = "Photo Gallary";
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutNavbar.cshtml";
 }
+
 <script src="~/Scripts/Index.js"></script>
 
-<div class="container-fluid" id="containerIndexPage">
+<div class="container" id="containerIndexPage">
 
 </div>
 
@@ -16,15 +18,15 @@
         <hr />
         <div class="photo3pt" id="IdPhotoDiv${Id}">
         </div>
-        
+
 
     </div>
 </script>
 
 <script id="divGenresTmpl" type="text/x-jquery-tmpl">
     <div class="onePhotoIndex" style="margin-right:2px;">
-        <p class="text-center">${Name}</p>
         <img class="img-thumbnail" src=${Url} alt="Image" />
+        <p class="text-center">${Description}</p>
     </div>
 
 </script>

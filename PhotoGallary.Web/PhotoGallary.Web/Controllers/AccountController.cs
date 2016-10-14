@@ -37,16 +37,16 @@ namespace PhotoGallary.Web.Controllers
         public ActionResult Logout()
         {
             FormsAuthentication.SignOut();
-            return RedirectToAction("Login");
+            return RedirectToAction("Index", "Home");
         }
 
 
         public void Init()
         {
-            Membership.CreateUser("Andrey", "123456");
-            Roles.CreateRole("admin");
-            Roles.CreateRole("superadmin");
-            Roles.AddUserToRole("Andrey", "admin");
+            Membership.CreateUser("user", "123456");
+            Roles.CreateRole("user");
+            Roles.DeleteRole("superadmin");
+            Roles.AddUserToRole("user", "user");
         }
 
     }

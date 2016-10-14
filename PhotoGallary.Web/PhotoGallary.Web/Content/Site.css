@@ -52,7 +52,7 @@ textarea {
 
 .photo3pt{
     height:260px;
-    /*width:930px;*/
+    width:inherit;
    /**/ text-align:center;
 
 }
@@ -60,7 +60,7 @@ textarea {
     display:inline-block;
     margin:5px;
     height:250px;
-    width:200px;
+    width:220px;
 }
 .onePhotoGenre{
     margin:10px;
@@ -68,6 +68,39 @@ textarea {
 
 }
 .formLogin{
-    margin-top:100px;
-    margin-bottom:300px;
+    margin-top:70px;
+    margin-bottom:200px;
+}
+.navbarMargin{
+    margin-right:20px;
+    margin-left:20px;
+}
+.ganre_link{
+    font-size:20px;
+   margin-top:10px;
+}
+.divManage{
+    border:1px solid;
+    height:200px;
+    width:200px;
+    font-size:20px;
+}
+td{
+   height:50px;
+   width:100px;
+   text-align:center;
+}
+th{
+   height:50px;
+   width:100px;
+   text-align:center;
+}
+#tableUsers{
+    margin:50px;
+    margin-left:0px;
+}
+#divAddUser{
+    margin-top:10px;
+    display:none;
+
 }
