@@ -37,6 +37,14 @@ namespace PhotoGallary.Web.Controllers
 
             return View(users);
         }
+
+        public ActionResult Photos()
+        {
+
+            return View();
+        }
+
+
         public JsonResult GetRoles()
         {
             return Json(Roles.GetAllRoles(), JsonRequestBehavior.AllowGet);
@@ -51,6 +59,37 @@ namespace PhotoGallary.Web.Controllers
                 return true;
             }
             else return false;
+        }
+        public void DeleteUser(string Name)
+        {
+            Membership.DeleteUser(Name);
+        }
+        //public UserViewModel EditUser(NewUser user)
+        //{
+        //    var editUser = Membership.GetUser(user.Name);
+        //    editUser.ChangePassword(user)
+        //    Membership.UpdateUser();
+        //    MembershipUser.
+        //}
+        public void EditRole(string Name, string Role)
+        {
+            var role = Roles.GetRolesForUser(Name);
+            Roles.RemoveUserFromRoles(Name,role);
+            Roles.AddUserToRole(Name, Role);
+        }
+
+        public JsonResult AddRole(string RoleName)
+        {
+            Roles.CreateRole(RoleName);
+
+            return Json(Roles.GetAllRoles(), JsonRequestBehavior.AllowGet);
+        }
+
+        public JsonResult RemoveRole(string RoleName)
+        {
+            Roles.DeleteRole(RoleName);
+
+            return Json(Roles.GetAllRoles(), JsonRequestBehavior.AllowGet);
         }
     }
 }

@@ -29,6 +29,15 @@ namespace PhotoGallary.Web.Controllers
            return Json( _service.GetGenres(), JsonRequestBehavior.AllowGet);
         }
 
+        public int AddGenre(string Name)
+        {
+            return _service.AddGenre(Name);
+        }
+        public bool RemoveGenre(int id)
+        {
+            return _service.RemoveGenre(id);
+        }
+
         public JsonResult Photos(int id)
         {
             return Json(_service.GetPhotos(id), JsonRequestBehavior.AllowGet);

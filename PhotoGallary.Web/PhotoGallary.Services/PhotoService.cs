@@ -93,6 +93,46 @@ namespace PhotoGallary.Services
             return genre;
         }
 
+        //Add new genre
+        public int AddGenre(string Name)
+        {
+            int result = 0;
+            bool exist = false;
+            using (var DB = new PhotoGallaryEntities())
+            {
+                var genres = DB.Genres.ToList();
+                foreach(var item in genres)
+                {
+                    if (item.Name == Name)
+                        exist = true;                 
+                }
+                if (!exist)
+                {
+                    var newGenre = DB.Genres.Add(new Genre { Name = Name });
+                    DB.SaveChanges();
+                    result = newGenre.Id;
+                }
+                return result;
+            }
+        }
+
+        //Remove Genre for id
+        public bool RemoveGenre(int id)
+        {
+            bool result = false;
+
+            using (var DB = new PhotoGallaryEntities())
+            {
+                //переместить все фотографии жанра
+                var genre = DB.Genres.First(x => x.Id == id);
+                DB.Genres.Remove(genre);
+                DB.SaveChanges();
+                result = true;
+            }
+
+            return result;
+        }
+
 
     }
 }

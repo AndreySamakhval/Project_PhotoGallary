@@ -15,6 +15,8 @@ namespace PhotoGallary.Services
         List<PhotoViewModel> GetLastPhotos(int id);
         List<GenresViewModel> GetGenres();
         GenresViewModel GetGenre(int id);
+        int AddGenre(string Name);
+        bool RemoveGenre(int id);
 
     }
 }
