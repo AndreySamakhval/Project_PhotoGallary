@@ -13,6 +13,7 @@ namespace PhotoGallary.ViewModel
         public string Url { get; set; }
         public string Description { get; set; }
         public string DateAdded { get; set; }
+        public string[] GenrePhoto { get; set; }
         
     }
 }

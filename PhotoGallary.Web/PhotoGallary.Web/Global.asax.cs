@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dependency;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,6 +14,9 @@ namespace PhotoGallary.Web
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+            DependencyResolver.SetResolver(
+                new MyDependencyResolver());
         }
     }
 }

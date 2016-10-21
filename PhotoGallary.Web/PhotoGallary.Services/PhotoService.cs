@@ -11,15 +11,40 @@ namespace PhotoGallary.Services
 {
     public class PhotoService : IPhotoService
     {
+        //get string[] genres of Photo
+        public string[] GetGenresPhoto(int id)
+        {
+            string[] result;
+            using(var DB = new PhotoGallaryEntities())
+            {
+                var genres = DB.Photos.First(x => x.Id == id).Genres;
+                result = new string[genres.Count];
+                int i = 0;
+                foreach (var item in genres)
+                {
+                    result[i] = item.Name;
+                    i++;
+                }
+            }
+            return result;
+
+        }
         //get one photo for id
         public PhotoViewModel GetPhoto(int id = 1)
         {
             var photo = new PhotoViewModel();
 
             using (var DB = new PhotoGallaryEntities())
-            {
-                photo = DB.Photos.Where(x => x.Id == id).Select(p => new PhotoViewModel { Id = p.Id, Name = p.Name, Url = p.Url, Description = p.Description, DateAdded = p.DateAdded.ToString() }).Single();
+            {                
+                photo = DB.Photos.Where(x => x.Id == id).Select(p => new PhotoViewModel {
+                    Id = p.Id,
+                    Name = p.Name,
+                    Url = p.Url,
+                    Description = p.Description,
+                    DateAdded = p.DateAdded.ToString()
+                }).Single();                
             }
+            photo.GenrePhoto = GetGenresPhoto(id);
             return photo;
         }
 
@@ -30,7 +55,17 @@ namespace PhotoGallary.Services
 
             using (var DB = new PhotoGallaryEntities())
             {
-                photos = DB.Photos.Select(p => new PhotoViewModel { Id = p.Id, Name = p.Name, Description = p.Description, Url = p.Url, DateAdded = p.DateAdded.ToString() }).ToList();
+                photos = DB.Photos.Select(p => new PhotoViewModel {
+                    Id = p.Id,
+                    Name = p.Name,
+                    Description = p.Description,
+                    Url = p.Url, DateAdded = p.DateAdded.ToString()
+                }).ToList();
+            }
+
+            foreach(var item in photos)
+            {
+                item.GenrePhoto = GetGenresPhoto(item.Id);
             }
             return photos;
         }
@@ -41,7 +76,12 @@ namespace PhotoGallary.Services
             var photos = new List<PhotoViewModel>();
             using (var DB = new PhotoGallaryEntities())
             {
-                photos = DB.Genres.First(x => x.Id == id).Photos.Select(p => new PhotoViewModel { Id = p.Id, Description = p.Description, Name = p.Name, Url = p.Url, DateAdded = p.DateAdded.ToString()}).ToList();
+                photos = DB.Genres.First(x => x.Id == id).Photos.Select(p => new PhotoViewModel {
+                    Id = p.Id,
+                    Description = p.Description,
+                    Name = p.Name, Url = p.Url,
+                    DateAdded = p.DateAdded.ToString()
+                }).ToList();
             }
 
             return photos;
@@ -75,7 +115,11 @@ namespace PhotoGallary.Services
 
             using (var DB = new PhotoGallaryEntities())
             {
-                _genres = DB.Genres.Select(g => new GenresViewModel { Id = g.Id, Name = g.Name, Description = g.Description }).ToList();
+                _genres = DB.Genres.Select(g => new GenresViewModel {
+                    Id = g.Id,
+                    Name = g.Name,
+                    Description = g.Description
+                }).ToList();
             }
             return _genres;
         }
@@ -88,7 +132,10 @@ namespace PhotoGallary.Services
             using(var DB = new PhotoGallaryEntities())
             {
                 var res = DB.Genres.First(x => x.Id == id);
-                genre = new GenresViewModel { Id = res.Id, Description = res.Description, Name = res.Name };
+                genre = new GenresViewModel {
+                    Id = res.Id,
+                    Description = res.Description,
+                    Name = res.Name };
             }
             return genre;
         }

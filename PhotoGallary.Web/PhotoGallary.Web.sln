@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoGallary.Web", "PhotoGallary.Web\PhotoGallary.Web.csproj", "{088BF2EE-0943-4E2E-AFF0-5BCA1AA3C0E6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{59A62543-6EA2-4B76-9DFF-631C37FA77EE} = {59A62543-6EA2-4B76-9DFF-631C37FA77EE}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoGallary.ViewModel", "PhotoGallary.ViewModel\PhotoGallary.ViewModel.csproj", "{AA137178-CB1B-4B64-8364-B2E56EBE1399}"
 EndProject
@@ -12,6 +15,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoGallary.DAL", "PhotoGallary.DAL\PhotoGallary.DAL.csproj", "{225040EA-3BA6-4D9F-AEE6-F8C0A85BE9E9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoGallary.DalDF", "PhotoGallary.DalDF\PhotoGallary.DalDF.csproj", "{1E577699-7C73-4C4B-9E87-1AE92CE43CCF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dependency", "Dependency\Dependency.csproj", "{59A62543-6EA2-4B76-9DFF-631C37FA77EE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C80C6E28-AA3C-427F-9B05-A02090CDDEFF} = {C80C6E28-AA3C-427F-9B05-A02090CDDEFF}
+		{1E577699-7C73-4C4B-9E87-1AE92CE43CCF} = {1E577699-7C73-4C4B-9E87-1AE92CE43CCF}
+		{225040EA-3BA6-4D9F-AEE6-F8C0A85BE9E9} = {225040EA-3BA6-4D9F-AEE6-F8C0A85BE9E9}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +49,10 @@ Global
 		{1E577699-7C73-4C4B-9E87-1AE92CE43CCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E577699-7C73-4C4B-9E87-1AE92CE43CCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E577699-7C73-4C4B-9E87-1AE92CE43CCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59A62543-6EA2-4B76-9DFF-631C37FA77EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59A62543-6EA2-4B76-9DFF-631C37FA77EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59A62543-6EA2-4B76-9DFF-631C37FA77EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59A62543-6EA2-4B76-9DFF-631C37FA77EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

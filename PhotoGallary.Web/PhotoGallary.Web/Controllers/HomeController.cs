@@ -7,9 +7,15 @@ using System.Web.Mvc;
 
 namespace PhotoGallary.Web.Controllers
 {
+
     public class HomeController : Controller
     {
-        PhotoService _service = new PhotoService();
+       // PhotoService _service = new PhotoService();
+        IPhotoService _service;
+        public HomeController(IPhotoService Service)
+        {
+            _service = Service;
+        }
 
         public ActionResult Index()
         {

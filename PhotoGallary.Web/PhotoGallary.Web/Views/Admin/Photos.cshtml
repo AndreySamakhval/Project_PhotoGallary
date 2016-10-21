@@ -9,13 +9,14 @@
 <hr />
 <div class="container">
     <div id="divAddGenre">
-        <h4>Add New Genre:</h4>
+        <h3>Add New Genre:</h3>
         <input type="text" class="form-control" id="inputNewGenre" placeholder="New Genre"/>
         <p class="text-danger" id="pErrorGenreName"></p>
         <button type="button" class="btn btn-success" id="btnAddGenre">Add Genre</button>
         <hr />
     </div>
     <div id="divShowGenre">
+        <h3>Genres:</h3>
         <table class="table-responsive table-striped table-bordered" id="tableGenre">
             <tr>
                 <th>Genre</th>
@@ -26,7 +27,7 @@
 </div>
 </div>
 <script id="showGenreTmpl" type="text/x-jquery-tmpl">
-        <tr id="${Id}">
+        <tr id="tr${Id}">
             <td>${Name}</td>
             <td>
                 <input type="button" class="btn btn-danger btnDeleteRole" value="Delete" id="${Id}"/>

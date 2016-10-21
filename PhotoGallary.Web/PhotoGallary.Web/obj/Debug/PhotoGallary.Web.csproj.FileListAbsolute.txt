@@ -190,3 +190,14 @@ D:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\ru\System.Web
 D:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\obj\Debug\PhotoGallary.Web.csprojResolveAssemblyReference.cache
 D:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\obj\Debug\PhotoGallary.Web.dll
 D:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\obj\Debug\PhotoGallary.Web.pdb
+G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\Dependency.dll
+G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\Microsoft.Practices.ServiceLocation.dll
+G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\Microsoft.Practices.Unity.Configuration.dll
+G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\Microsoft.Practices.Unity.dll
+G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
+G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\Dependency.pdb
+G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\Microsoft.Practices.ServiceLocation.pdb
+G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\Microsoft.Practices.ServiceLocation.xml
+G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\Microsoft.Practices.Unity.xml
+G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\Microsoft.Practices.Unity.Configuration.xml
+G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml

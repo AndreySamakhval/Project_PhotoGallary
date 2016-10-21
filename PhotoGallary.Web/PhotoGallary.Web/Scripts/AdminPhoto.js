@@ -49,21 +49,20 @@ manage = {
         });
     },
 
-    removeGenre:function(id){
-       // var id = $(this).attr("id");
-        $('tr #' + id).remove();
+    removeGenre:function(id){      
+        $('#tr'+ id).remove();
 
-        //$.ajax({
-        //    type: 'GET',
-        //    url: '/home/removegenre/'+id,            
-        //    asynch: true,
-        //    success: function (output, status, xhr) {
-        //        $('tr #' + id).remove();
-        //    },
-        //    error: function () {
-        //        alert('Error');
-        //    }
-        //});
+        $.ajax({
+            type: 'GET',
+            url: '/home/removegenre/'+id,            
+            asynch: true,
+            success: function (output, status, xhr) {
+                $('#tr' + id).remove();
+            },
+            error: function () {
+                alert('Error');
+            }
+        });
     },
 
     renderGenres: function (output) {
