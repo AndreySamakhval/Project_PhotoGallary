@@ -201,3 +201,14 @@ G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\Microsoft.Pra
 G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\Microsoft.Practices.Unity.xml
 G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\Microsoft.Practices.Unity.Configuration.xml
 G:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
+D:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\Dependency.dll
+D:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\Microsoft.Practices.ServiceLocation.dll
+D:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\Microsoft.Practices.Unity.Configuration.dll
+D:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\Microsoft.Practices.Unity.dll
+D:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
+D:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\Dependency.pdb
+D:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\Microsoft.Practices.ServiceLocation.pdb
+D:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\Microsoft.Practices.ServiceLocation.xml
+D:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\Microsoft.Practices.Unity.xml
+D:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\Microsoft.Practices.Unity.Configuration.xml
+D:\_GIT\Project_PhotoGallary\PhotoGallary.Web\PhotoGallary.Web\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
